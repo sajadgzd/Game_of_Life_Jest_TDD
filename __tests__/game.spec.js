@@ -1,5 +1,5 @@
 require("../game");
-const { isAlive, generate, regenerate, countNeighbours } = window.game;
+const { isAlive, generate, regenerate, countNeighbours, drawGrid } = window.game;
 
 
 
@@ -67,6 +67,21 @@ describe("game of life", ()=> {
         test("should return all live cells", () => {
             const cells = [1, 1, 1, 0]
             expect(regenerate(cells)).toEqual([1, 1, 1, 1])
+        })
+    })
+
+    describe("browser grid", () => {
+        test("should display 4 cell", () => {
+            document.body.innerHTML = `<div id="grid"></grid>`
+            drawGrid([0,0,1,1])
+            expect(document.querySelectorAll('.cell').length).toEqual(4)
+            expect(document.querySelectorAll('.live').length).toEqual(2)
+            expect(document.querySelectorAll('.dead').length).toEqual(2)
+
+            drawGrid([1,1,0,0])
+            expect(document.querySelectorAll('.cell').length).toEqual(4)
+            expect(document.querySelectorAll('.live').length).toEqual(2)
+            expect(document.querySelectorAll('.dead').length).toEqual(2)
         })
     })
 })
