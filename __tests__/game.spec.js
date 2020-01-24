@@ -1,5 +1,5 @@
 require("../game");
-const { isAlive, generate, regenerate } = window.game;
+const { isAlive, generate, regenerate, countNeighbours } = window.game;
 
 
 
@@ -26,17 +26,47 @@ describe("game of life", ()=> {
         })
     })
 
+    describe("countNeighbours", () => {
+        test("should count 1 for array of one", () => {
+            expect(countNeighbours([1], 0)).toEqual(0)
+        })
+        test("should count 2 neighbours", () => {
+            expect(countNeighbours([1, 1, 1, 0], 0)).toEqual(2)
+        })
+        test("should count 2 neighbours", () => {
+            expect(countNeighbours([1, 1, 1, 0], 1)).toEqual(2)
+        })
+        test("should count 2 neighbours", () => {
+            expect(countNeighbours([1, 1, 1, 0], 2)).toEqual(2)
+        })
+        test("should count 3 neighbours", () => {
+            expect(countNeighbours([1, 1, 1, 0], 3)).toEqual(3)
+        })
+        test("should count 3 neighbours", () => {
+            expect(countNeighbours([
+                1, 1, 1,
+                0, 0, 0,
+                0, 0 ,0
+                ], 4)).toEqual(3)
+        })
+    })
+
+
     describe("regenerate function", () => {
         test("should not update dead cells", () => {
             const cells = generate(1)
             expect(regenerate(cells)).toEqual(cells)
         })
 
-        test("should update", () => {
+        test("should return all dead cells", () => {
             const initialCells = generate(2)
             const cells = generate(2)
             cells[0] = 1
             expect(regenerate(cells)).toEqual(initialCells)
+        })
+        xtest("should return all live cells", () => {
+            const cells = [1, 1, 1, 0]
+            expect(regenerate(cells)).toEqual([1, 1, 1, 1])
         })
     })
 })
