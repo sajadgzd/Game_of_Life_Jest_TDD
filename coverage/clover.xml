@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1579891906952" clover="3.2.0">
-  <project timestamp="1579891906952" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="19" coveredconditionals="19" methods="7" coveredmethods="7" elements="36" coveredelements="36" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+<coverage generated="1579893500910" clover="3.2.0">
+  <project timestamp="1579893500910" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="11" coveredconditionals="11" methods="9" coveredmethods="9" elements="34" coveredelements="34" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
     <file name="game.js" path="/Users/sajad/Downloads/sideproject/Game_of_Life_Jest_TDD/game.js">
-      <metrics statements="10" coveredstatements="10" conditionals="19" coveredconditionals="19" methods="7" coveredmethods="7"/>
+      <metrics statements="14" coveredstatements="14" conditionals="11" coveredconditionals="11" methods="9" coveredmethods="9"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="9" type="cond" truecount="5" falsecount="0"/>
+      <line num="2" count="13" type="cond" truecount="5" falsecount="0"/>
       <line num="4" count="5" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="48" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="72" type="cond" truecount="2" falsecount="0"/>
       <line num="10" count="1" type="stmt"/>
-      <line num="11" count="6" type="stmt"/>
-      <line num="12" count="6" type="stmt"/>
-      <line num="24" count="5" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
+      <line num="11" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="15" type="stmt"/>
+      <line num="27" count="15" type="stmt"/>
+      <line num="35" count="9" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

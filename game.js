@@ -7,21 +7,32 @@ const add = (...args) => {
   return args.reduce((accumulator, current) => accumulator + (current || 0), 0)
 }
 
+const leftColumnValues = (index, width, cells) => 
+  index % width ? [
+    cells[index - 1],
+    cells[index - width - 1],
+    cells[index + width - 1],
+    ] : []
+
+const rightColumnValues = (index, width, cells) => 
+(index + 1) % width ? [
+  cells[index + 1],
+  cells[index - width + 1],
+  cells[index + width + 1]
+  ] : []
+
+
 const countNeighbours = (cells, index) => {
   const width = Math.sqrt(cells.length)
   return add(
-    index % width ? cells[index - 1] : 0,
-    (index + 1) % width ? cells[index + 1] : 0,
     cells[index - width],
-    index % width ? cells[index - width - 1] : 0,
-    (index + 1) % width ? cells[index - width + 1] : 0,
     cells[index + width],
-    index % width ? cells[index + width - 1] : 0,
-    (index + 1) % width ? cells[index + width + 1] : 0
+    ...leftColumnValues(index, width, cells),
+    ...rightColumnValues(index, width, cells)
   )
 }
 
-const regenerate = cells => cells.map(cell => isAlive(cell, 0))
+const regenerate = cells => cells.map((cell,index) => isAlive(cell, countNeighbours(cells, index)))
 
 window.game = {
   isAlive,

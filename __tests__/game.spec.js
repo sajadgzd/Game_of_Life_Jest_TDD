@@ -64,7 +64,7 @@ describe("game of life", ()=> {
             cells[0] = 1
             expect(regenerate(cells)).toEqual(initialCells)
         })
-        xtest("should return all live cells", () => {
+        test("should return all live cells", () => {
             const cells = [1, 1, 1, 0]
             expect(regenerate(cells)).toEqual([1, 1, 1, 1])
         })
