@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1579884876987" clover="3.2.0">
-  <project timestamp="1579884876987" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+<coverage generated="1579885770070" clover="3.2.0">
+  <project timestamp="1579885770070" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4" elements="14" coveredelements="14" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
     <file name="game.js" path="/Users/sajad/Downloads/sideproject/Game_of_Life_Jest_TDD/game.js">
-      <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="4" type="cond" truecount="5" falsecount="0"/>
-      <line num="5" count="1" type="stmt"/>
+      <line num="2" count="9" type="cond" truecount="5" falsecount="0"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
